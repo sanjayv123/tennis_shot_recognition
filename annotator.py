@@ -14,7 +14,7 @@ import cv2
 
 LEFT_ARROW_KEY = 81
 UP_ARROW_KEY = 82
-RIGHT_ARROW_KEY = 83
+RIGHT_ARROW_KEY = 0
 
 
 if __name__ == "__main__":
@@ -45,6 +45,7 @@ if __name__ == "__main__":
 
         cv2.imshow("Frame", frame)
         k = cv2.waitKey(30)
+        print(k)
 
         if k == RIGHT_ARROW_KEY:  # forehand
             your_list.append({"Shot": "forehand", "FrameId": FRAME_ID})
